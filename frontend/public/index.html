@@ -332,7 +332,7 @@
             showMessage('authMessage', 'Logging in...', 'success');
             
             try {
-                const response = await fetch(`${API_BASE}/auth/login`, {
+                const response = await fetch(`${API_BASE}/api/auth/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -364,7 +364,7 @@
 
         async function checkAuth() {
             try {
-                const response = await fetch(`${API_BASE}/auth/profile`, {
+                const response = await fetch(`${API_BASE}/api/auth/profile`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
@@ -473,7 +473,7 @@
             ticketsList.innerHTML = '<div class="loading">Loading all tickets...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/tickets`, {
+                const response = await fetch(`${API_BASE}/api/tickets`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
@@ -496,7 +496,7 @@
             ticketsList.innerHTML = '<div class="loading">Loading all tickets...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/tickets`, {
+                const response = await fetch(`${API_BASE}/api/tickets`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
@@ -520,7 +520,7 @@
             ticketsList.innerHTML = '<div class="loading">Loading your tickets...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/tickets`, {
+                const response = await fetch(`${API_BASE}/api/tickets`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
@@ -547,7 +547,7 @@
             ticketsList.innerHTML = '<div class="loading">Loading SLA breached tickets...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/tickets/sla-breached`, {
+                const response = await fetch(`${API_BASE}/api/tickets/sla-breached`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
@@ -669,7 +669,7 @@
             console.log('Creating ticket:', { title, description, priority });
             
             try {
-                const response = await fetch(`${API_BASE}/tickets`, {
+                const response = await fetch(`${API_BASE}/api/tickets`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -762,7 +762,7 @@
             if (assigneeId === null) return; // User cancelled
             
             try {
-                const response = await fetch(`${API_BASE}/tickets/${ticketId}`, {
+                const response = await fetch(`${API_BASE}/api/tickets/${ticketId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -804,7 +804,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE}/tickets/${ticketId}`, {
+                const response = await fetch(`${API_BASE}/api/tickets/${ticketId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -843,7 +843,7 @@
             ticketsList.innerHTML = '<div class="loading">Loading unassigned tickets...</div>';
             
             try {
-                const response = await fetch(`${API_BASE}/tickets`, {
+                const response = await fetch(`${API_BASE}/api/tickets`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`
                     }
