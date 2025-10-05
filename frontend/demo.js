@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const BASE_URL = 'https;//api.helpdesk.kawal.space';
+const BASE_URL = 'https://api.helpdesk.kawal.space';
 
 async function demo() {
     console.log('🚀 HelpDesk Mini API Demo\n');
@@ -121,8 +121,8 @@ async function demo() {
         console.log('');
 
         console.log('🎉 Demo completed successfully!');
-        console.log('\n📚 API Documentation: http://localhost:3000/api');
-        console.log('🏥 Health Check: http://localhost:3000/health');
+        console.log('\n📚 API Documentation: https://api.helpdesk.kawal.space/api');
+        console.log('🏥 Health Check: https://api.helpdesk.kawal.space/health');
 
     } catch (error) {
         console.error('❌ Demo failed:', error.response?.data || error.message);
