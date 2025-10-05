@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https;//api.helpdesk.kawal.space';
 
 async function demo() {
     console.log('🚀 HelpDesk Mini API Demo\n');
