@@ -1,41 +1,32 @@
 {
-  "name": "helpdesk-mini",
+  "name": "helpdesk-mini-project",
   "version": "1.0.0",
-  "description": "A robust ticketing system API with SLA tracking and RBAC",
-  "main": "src/server.js",
+  "description": "A robust ticketing system with backend API and frontend interface",
+  "private": true,
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "test": "jest",
-    "migrate": "node src/database/migrate.js"
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "test:backend": "cd backend && npm test",
+    "migrate:backend": "cd backend && npm run migrate",
+    "init-production": "cd backend && npm run init-production",
+    "start": "npm run start:backend",
+    "dev": "npm run dev:backend",
+    "test": "npm run test:backend",
+    "migrate": "npm run migrate:backend",
+    "deploy": "./deploy.sh"
   },
   "keywords": [
     "helpdesk",
     "ticketing",
     "api",
+    "frontend",
+    "backend",
     "sla",
     "rbac"
   ],
   "author": "HelpDesk Mini Team",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^1.12.2",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-rate-limit": "^7.1.5",
-    "express-validator": "^7.0.1",
-    "helmet": "^7.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.0",
-    "sqlite3": "^5.1.6",
-    "uuid": "^9.0.1"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "nodemon": "^3.0.2",
-    "supertest": "^6.3.3"
-  }
+  "license": "MIT"
 }
-
